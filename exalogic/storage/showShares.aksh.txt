@@ -1,0 +1,18 @@
+script
+    run('shares');
+    projects = list();
+    printf("%-50s %-10s %-10s\n", "Project/Share", "Used", "Available");
+    printf("%-50s %-10s %-10s\n", "=============", "====", "=========");
+    for (i = 0; i < projects.length; i++) {
+        run('select ' + projects[i]);
+        shares = list();
+        for (j = 0; j < shares.length; j++) {
+            run('select ' + shares[j]);
+            share = projects[i] + '/' + shares[j];
+            used = run('get space_data').split(/\s+/)[3];
+            available = run('get space_available').split(/\s+/)[3];
+            printf("%-50s %-10s %-10s\n", share, used, available);
+            run('cd ..');
+        }
+        run('cd ..');
+    }

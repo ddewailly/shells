@@ -1,0 +1,59 @@
+#!/bin/bash
+ 
+BAK_EXT=`date +"%Y%m%d-%H%M%S"`
+PROJECT=""
+SHARE=""
+IPADDRESS=""
+SNAPSHOTNAME="SnapShot-$BAK_EXT"
+ 
+while [ $# -gt 0 ]
+do
+    case "$1" in
+        -ip) IPADDRESS="$2"; shift;;
+        -p) PROJECT="$2"; shift;;
+        -s) SHARE="$2"; shift;;
+        -n) SNAPSHOTNAME="$2"; shift;;
+        *) echo ""; echo >&2 \
+            "usage: $0 -ip <Storage Node hostname/IP> -p <Project Name> [-s <Share Name>] [-n <Snapshot Name>] "
+            echo""; exit 1;;
+        *) break;;
+    esac
+    shift
+done
+ 
+if [ "$IPADDRESS" == "" ]
+then
+    echo "IP Address or Hostname of the Storage must be provided"
+    exit 1
+fi
+ 
+if [ "$PROJECT" == "" ]
+then
+    echo "Project name must be provided"
+    exit 1
+fi
+ 
+echo $SNAPSHOTNAME
+ 
+ssh root@$IPADDRESS <<EOF
+script
+    try {
+        run('cd /');
+        run('shares');
+        run('select $PROJECT');
+        printf('%s\n', run('list'));
+        try {
+            run('select $SHARE');
+        } catch (e) {
+        }
+        run('snapshots');
+        run('snapshot $SNAPSHOTNAME');
+ 
+    } catch (err) {
+        if (err.code == EAKSH_ENTITY_BADSELECT) {
+            printf('ERROR: "$SHARE" is not a share in the "$PROJECT" project\n');
+        } else {
+            printf('ERROR: (%s)\n', err.message);
+        }
+    }
+EOF

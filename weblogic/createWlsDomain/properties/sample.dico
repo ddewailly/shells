@@ -1,0 +1,13 @@
+BEA_HOME=C:/Oracle/Middleware/10.3.6
+domainName=domainSample
+domainRootDir=C:/domains
+template=C:/Oracle/Middleware/10.3.6/wlserver_10.3/common/templates/domains/wls.jar 
+javaHome=C:/Java/jrockit-jdk1.6.0_37-R28.2.5-4.1.0
+javaVendor=Oracle
+adminServerName=adminServer
+adminServerAddress=localhost
+adminServerPort=7005
+adminUser=weblogic
+adminPassword=weblogic1
+srvArgs="-Xms512m -Xmx756m"
+srvClasspath=

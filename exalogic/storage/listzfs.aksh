@@ -1,0 +1,16 @@
+script
+       run('shares');
+       projects = list();
+
+       for (i = 0; i < projects.length; i++) {
+               run('select ' + projects[i]);
+               shares = list();
+
+               for (j = 0; j < shares.length; j++) {
+                 run('select ' + shares[j]);
+                 printf("%s/%s \t%s\n", projects[i], shares[j], get('mountpoint'));
+                 run('cd ..');
+               }
+
+               run('cd ..');
+       }

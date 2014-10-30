@@ -1,0 +1,20 @@
+script
+function processNode(node) {
+    run('cd /');
+    run(node);
+    printf("*****************************************************\n");
+    printf("%s\n", node);
+    printf("*****************************************************\n\n");
+ 
+    printf("%s", run('list'));
+ 
+    printf("\n\n*****************************************************\n\n");
+ 
+    var nodeChildren = children();
+    for (var i = 0; i < nodeChildren.length; i++) {
+        processNode(node + " " + nodeChildren[i]);
+        run('cd ..');
+    }
+}
+ 
+processNode('');

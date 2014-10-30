@@ -1,0 +1,18 @@
+script
+       run('shares');
+       projects = list();
+       printf("project/share\t\t\t\t\t\tspace_data\t\tspace_available\n")
+
+       for (i = 0; i < projects.length; i++) {
+               run('select ' + projects[i]);
+               shares = list();
+
+               for (j = 0; j < shares.length; j++) {
+                       run('select ' + shares[j]);
+                       printf("%s/%s\t\t\t\t\t\t%1.64g\t\t%1.64g\n", projects[i], shares[j],
+                           get('space_data'), get('space_available'));
+                       run('cd ..');
+               }
+
+               run('cd ..');
+       }

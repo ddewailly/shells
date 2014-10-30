@@ -1,0 +1,495 @@
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- demarrage du node manager ----
+Launching NodeManager ... 
+ Properties: {NodeManagerHome=/wls/admin/nodemanager/frpivovm2000_forms/common,} 
+ Command: /wls/products/jdk/jdk1.7.0_60/jre/bin/java -classpath /wls/products/jdk/jdk1.7.0_60/jre/lib/rt.jar:/wls/products/jdk/jdk1.7.0_60/jre/lib/i18n.jar:/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar:/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar weblogic.NodeManager -v
+NMProcess: <Aug 14, 2014 9:55:07 AM> <INFO> <Loading domains file: /wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.domains>
+NMProcess: Aug 14, 2014 9:55:07 AM weblogic.nodemanager.server.NMServerConfig initDomainsMap
+NMProcess: INFO: Loading domains file: /wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.domains
+NMProcess: <Aug 14, 2014 9:55:08 AM> <INFO> <Loading identity key store: FileName=/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/DemoIdentity.jks, Type=jks, PassPhraseUsed=true>
+NMProcess: Aug 14, 2014 9:55:08 AM weblogic.nodemanager.server.SSLConfig loadKeyStoreConfig
+NMProcess: INFO: Loading identity key store: FileName=/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/DemoIdentity.jks, Type=jks, PassPhraseUsed=true
+NMProcess: <Aug 14, 2014 9:55:08 AM> <WARNING> <Node manager configuration properties file '/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.properties' not found. Using default settings.>
+NMProcess: Aug 14, 2014 9:55:08 AM weblogic.nodemanager.server.NMServer <init>
+NMProcess: WARNING: Node manager configuration properties file '/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.properties' not found. Using default settings.
+NMProcess: <Aug 14, 2014 9:55:08 AM> <INFO> <Saving node manager configuration properties to '/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.properties'>
+NMProcess: Aug 14, 2014 9:55:08 AM weblogic.nodemanager.server.NMServer <init>
+NMProcess: INFO: Saving node manager configuration properties to '/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.properties'
+NMProcess: Node manager v10.3
+NMProcess: 
+NMProcess: Configuration settings:
+NMProcess: 
+NMProcess: NodeManagerHome=/wls/admin/nodemanager/frpivovm2000_forms/common
+NMProcess: ListenAddress=
+NMProcess: ListenPort=5556
+NMProcess: ListenBacklog=50
+NMProcess: SecureListener=true
+NMProcess: AuthenticationEnabled=true
+NMProcess: NativeVersionEnabled=true
+NMProcess: CrashRecoveryEnabled=false
+NMProcess: JavaHome=/wls/products/jdk/jdk1.7.0_60/jre
+NMProcess: StartScriptEnabled=false
+NMProcess: StopScriptEnabled=false
+NMProcess: StartScriptName=startWebLogic.sh
+NMProcess: StopScriptName=
+NMProcess: LogFile=/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.log
+NMProcess: LogLevel=INFO
+NMProcess: LogLimit=0
+NMProcess: LogCount=1
+NMProcess: LogAppend=true
+NMProcess: LogToStderr=true
+NMProcess: LogFormatter=weblogic.nodemanager.server.LogFormatter
+NMProcess: DomainsFile=/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.domains
+NMProcess: DomainsFileEnabled=true
+NMProcess: StateCheckInterval=500
+NMProcess: QuitEnabled=true
+NMProcess: UseMACBroadcast=false
+NMProcess: DomainRegistrationEnabled=false
+NMProcess: DomainsDirRemoteSharingEnabled=false
+NMProcess: 
+NMProcess: Domain name mappings:
+NMProcess: 
+NMProcess: DOM_INT_FORMS -> /wls/admin/domains/DOM_INT_FORMS
+NMProcess: 
+NMProcess: <Aug 14, 2014 9:55:08 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+NMProcess: <Aug 14, 2014 9:55:08 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+NMProcess: <Aug 14, 2014 9:55:08 AM CEST> <Info> <Security> <BEA-090908> <Using default WebLogic SSL Hostname Verifier implementation.> 
+NMProcess: <Aug 14, 2014 9:55:08 AM> <INFO> <Secure socket listener started on port 5556>
+NMProcess: Aug 14, 2014 9:55:08 AM weblogic.nodemanager.server.SSLListener run
+NMProcess: INFO: Secure socket listener started on port 5556
+Successfully launched the Node Manager.
+The Node Manager process is running independent of the WLST process.
+Exiting WLST will not stop the Node Manager process. Please refer 
+to the Node Manager logs for more information.
+The Node Manager logs will be under /wls/admin/nodemanager/frpivovm2000_forms/common
+Node Manager starting in the background
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au node manager ----
+/wls/admin/domains
+/wls/admin/domains/DOM_INT_FORMS
+frpivovm2000.exa-internal.intra.corp
+5556
+DOM_INT_FORMS
+Connecting to Node Manager ...
+<Aug 14, 2014 9:55:20 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<Aug 14, 2014 9:55:20 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Entrust Root Certification Authority - G2,OU=(c) 2009 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G3,OU=(c) 2008 thawte\, Inc. - For authorized use only,OU=Certification Services Division,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G2,OU=(c) 2007 thawte\, Inc. - For authorized use only,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 3 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 2 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 3,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 2,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Class 3 Public Primary Certification Authority - G4,OU=(c) 2007 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "OU=Security Communication RootCA2,O=SECOM Trust Systems CO.\,LTD.,C=JP". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Universal Root Certification Authority,OU=(c) 2008 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=KEYNECTIS ROOT CA,OU=ROOT,O=KEYNECTIS,C=FR". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G3,OU=(c) 2008 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:20 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G2,OU=(c) 2007 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+Successfully Connected to Node Manager.
+---- demarrage du serveur d admin ----
+Starting server AdminServer ...
+Successfully started server AdminServer ...
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au node manager ----
+/wls/admin/domains
+/wls/admin/domains/DOM_INT_FORMS
+frpivovm2000.exa-internal.intra.corp
+5556
+DOM_INT_FORMS
+Connecting to Node Manager ...
+<Aug 14, 2014 9:55:41 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<Aug 14, 2014 9:55:41 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Entrust Root Certification Authority - G2,OU=(c) 2009 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G3,OU=(c) 2008 thawte\, Inc. - For authorized use only,OU=Certification Services Division,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G2,OU=(c) 2007 thawte\, Inc. - For authorized use only,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 3 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 2 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 3,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 2,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Class 3 Public Primary Certification Authority - G4,OU=(c) 2007 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "OU=Security Communication RootCA2,O=SECOM Trust Systems CO.\,LTD.,C=JP". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Universal Root Certification Authority,OU=(c) 2008 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=KEYNECTIS ROOT CA,OU=ROOT,O=KEYNECTIS,C=FR". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G3,OU=(c) 2008 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:42 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G2,OU=(c) 2007 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+Successfully Connected to Node Manager.
+---- demarrage du serveur WLS_FORMS  ----
+Problem invoking WLST - Traceback (innermost last):
+  File "/export/scripts/weblogic/controleWlsDomain/python/controleWLS.py", line 180, in ?
+  File "/export/scripts/weblogic/controleWlsDomain/python/controleWLS.py", line 42, in startServer
+NameError: start
+
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au node manager ----
+/wls/admin/domains
+/wls/admin/domains/DOM_INT_FORMS
+frpivovm2000.exa-internal.intra.corp
+5556
+DOM_INT_FORMS
+Connecting to Node Manager ...
+<Aug 14, 2014 9:55:45 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<Aug 14, 2014 9:55:45 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Entrust Root Certification Authority - G2,OU=(c) 2009 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G3,OU=(c) 2008 thawte\, Inc. - For authorized use only,OU=Certification Services Division,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G2,OU=(c) 2007 thawte\, Inc. - For authorized use only,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 3 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 2 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 3,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 2,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Class 3 Public Primary Certification Authority - G4,OU=(c) 2007 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "OU=Security Communication RootCA2,O=SECOM Trust Systems CO.\,LTD.,C=JP". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Universal Root Certification Authority,OU=(c) 2008 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=KEYNECTIS ROOT CA,OU=ROOT,O=KEYNECTIS,C=FR". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G3,OU=(c) 2008 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:55:46 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G2,OU=(c) 2007 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+Successfully Connected to Node Manager.
+---- demarrage du serveur WLS_REPORTS  ----
+Problem invoking WLST - Traceback (innermost last):
+  File "/export/scripts/weblogic/controleWlsDomain/python/controleWLS.py", line 180, in ?
+  File "/export/scripts/weblogic/controleWlsDomain/python/controleWLS.py", line 42, in startServer
+NameError: start
+
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au serveur d admin ----
+Connecting to t3://frpivovm2000.exa-internal.intra.corp:7101 with userid weblogic ...
+This Exception occurred at Thu Aug 14 09:59:35 CEST 2014.
+javax.naming.CommunicationException [Root exception is java.net.ConnectException: t3://frpivovm2000.exa-internal.intra.corp:7101: Destination unreachable; nested exception is: 
+	java.net.ConnectException: Connection refused; No available router to destination]
+==> Erreur : 
+Error occured while performing connect : Error getting the initial context. There is no server running at t3://frpivovm2000.exa-internal.intra.corp:7101 
+Use dumpStack() to view the full stacktrace
+
+
+Exiting WebLogic Scripting Tool.
+
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au serveur d admin ----
+Connecting to t3://frpivovm2000.exa-internal.intra.corp:7101 with userid weblogic ...
+This Exception occurred at Thu Aug 14 09:59:39 CEST 2014.
+javax.naming.CommunicationException [Root exception is java.net.ConnectException: t3://frpivovm2000.exa-internal.intra.corp:7101: Destination unreachable; nested exception is: 
+	java.net.ConnectException: Connection refused; No available router to destination]
+==> Erreur : 
+Error occured while performing connect : Error getting the initial context. There is no server running at t3://frpivovm2000.exa-internal.intra.corp:7101 
+Use dumpStack() to view the full stacktrace
+
+
+Exiting WebLogic Scripting Tool.
+
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au serveur d admin ----
+Connecting to t3://frpivovm2000.exa-internal.intra.corp:7101 with userid weblogic ...
+This Exception occurred at Thu Aug 14 09:59:43 CEST 2014.
+javax.naming.CommunicationException [Root exception is java.net.ConnectException: t3://frpivovm2000.exa-internal.intra.corp:7101: Destination unreachable; nested exception is: 
+	java.net.ConnectException: Connection refused; No available router to destination]
+==> Erreur : 
+Error occured while performing connect : Error getting the initial context. There is no server running at t3://frpivovm2000.exa-internal.intra.corp:7101 
+Use dumpStack() to view the full stacktrace
+
+
+Exiting WebLogic Scripting Tool.
+
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au node manager ----
+/wls/admin/domains
+/wls/admin/domains/DOM_INT_FORMS
+frpivovm2000.exa-internal.intra.corp
+5556
+DOM_INT_FORMS
+Connecting to Node Manager ...
+<Aug 14, 2014 9:59:46 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<Aug 14, 2014 9:59:46 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Entrust Root Certification Authority - G2,OU=(c) 2009 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G3,OU=(c) 2008 thawte\, Inc. - For authorized use only,OU=Certification Services Division,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G2,OU=(c) 2007 thawte\, Inc. - For authorized use only,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 3 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 2 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 3,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 2,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Class 3 Public Primary Certification Authority - G4,OU=(c) 2007 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "OU=Security Communication RootCA2,O=SECOM Trust Systems CO.\,LTD.,C=JP". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Universal Root Certification Authority,OU=(c) 2008 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=KEYNECTIS ROOT CA,OU=ROOT,O=KEYNECTIS,C=FR". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G3,OU=(c) 2008 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 9:59:47 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G2,OU=(c) 2007 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+Successfully Connected to Node Manager.
+---- arret du node manager ----
+Stopped NodeManager successfully
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- demarrage du node manager ----
+Launching NodeManager ... 
+ Properties: {NodeManagerHome=/wls/admin/nodemanager/frpivovm2000_forms/common,} 
+ Command: /wls/products/jdk/jdk1.7.0_60/jre/bin/java -classpath /wls/products/jdk/jdk1.7.0_60/jre/lib/rt.jar:/wls/products/jdk/jdk1.7.0_60/jre/lib/i18n.jar:/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar:/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar weblogic.NodeManager -v
+NMProcess: <Aug 14, 2014 10:00:25 AM> <INFO> <Loading domains file: /wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.domains>
+NMProcess: Aug 14, 2014 10:00:25 AM weblogic.nodemanager.server.NMServerConfig initDomainsMap
+NMProcess: INFO: Loading domains file: /wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.domains
+NMProcess: <Aug 14, 2014 10:00:26 AM> <INFO> <Loading identity key store: FileName=/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/DemoIdentity.jks, Type=jks, PassPhraseUsed=true>
+NMProcess: Aug 14, 2014 10:00:26 AM weblogic.nodemanager.server.SSLConfig loadKeyStoreConfig
+NMProcess: INFO: Loading identity key store: FileName=/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/DemoIdentity.jks, Type=jks, PassPhraseUsed=true
+NMProcess: <Aug 14, 2014 10:00:26 AM> <INFO> <Loaded node manager configuration properties from '/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.properties'>
+NMProcess: Aug 14, 2014 10:00:26 AM weblogic.nodemanager.server.NMServer <init>
+NMProcess: INFO: Loaded node manager configuration properties from '/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.properties'
+NMProcess: Node manager v10.3
+NMProcess: 
+NMProcess: Configuration settings:
+NMProcess: 
+NMProcess: NodeManagerHome=/wls/admin/nodemanager/frpivovm2000_forms/common
+NMProcess: ListenAddress=
+NMProcess: ListenPort=5556
+NMProcess: ListenBacklog=50
+NMProcess: SecureListener=true
+NMProcess: AuthenticationEnabled=true
+NMProcess: NativeVersionEnabled=true
+NMProcess: CrashRecoveryEnabled=false
+NMProcess: JavaHome=/wls/products/jdk/jdk1.7.0_60/jre
+NMProcess: StartScriptEnabled=true
+NMProcess: StopScriptEnabled=false
+NMProcess: StartScriptName=startWebLogic.sh
+NMProcess: StopScriptName=
+NMProcess: LogFile=/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.log
+NMProcess: LogLevel=INFO
+NMProcess: LogLimit=0
+NMProcess: LogCount=1
+NMProcess: LogAppend=true
+NMProcess: LogToStderr=true
+NMProcess: LogFormatter=weblogic.nodemanager.server.LogFormatter
+NMProcess: DomainsFile=/wls/admin/nodemanager/frpivovm2000_forms/common/nodemanager.domains
+NMProcess: DomainsFileEnabled=true
+NMProcess: StateCheckInterval=500
+NMProcess: QuitEnabled=true
+NMProcess: UseMACBroadcast=false
+NMProcess: DomainRegistrationEnabled=false
+NMProcess: DomainsDirRemoteSharingEnabled=false
+NMProcess: 
+NMProcess: Domain name mappings:
+NMProcess: 
+NMProcess: DOM_INT_FORMS -> /wls/admin/domains/DOM_INT_FORMS
+NMProcess: 
+NMProcess: <Aug 14, 2014 10:00:26 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+NMProcess: <Aug 14, 2014 10:00:26 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+NMProcess: <Aug 14, 2014 10:00:26 AM CEST> <Info> <Security> <BEA-090908> <Using default WebLogic SSL Hostname Verifier implementation.> 
+NMProcess: <Aug 14, 2014 10:00:26 AM> <INFO> <Secure socket listener started on port 5556>
+NMProcess: Aug 14, 2014 10:00:26 AM weblogic.nodemanager.server.SSLListener run
+NMProcess: INFO: Secure socket listener started on port 5556
+Successfully launched the Node Manager.
+The Node Manager process is running independent of the WLST process.
+Exiting WLST will not stop the Node Manager process. Please refer 
+to the Node Manager logs for more information.
+The Node Manager logs will be under /wls/admin/nodemanager/frpivovm2000_forms/common
+Node Manager starting in the background
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au node manager ----
+/wls/admin/domains
+/wls/admin/domains/DOM_INT_FORMS
+frpivovm2000.exa-internal.intra.corp
+5556
+DOM_INT_FORMS
+Connecting to Node Manager ...
+<Aug 14, 2014 10:00:38 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<Aug 14, 2014 10:00:38 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Entrust Root Certification Authority - G2,OU=(c) 2009 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G3,OU=(c) 2008 thawte\, Inc. - For authorized use only,OU=Certification Services Division,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G2,OU=(c) 2007 thawte\, Inc. - For authorized use only,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 3 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 2 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 3,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 2,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Class 3 Public Primary Certification Authority - G4,OU=(c) 2007 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "OU=Security Communication RootCA2,O=SECOM Trust Systems CO.\,LTD.,C=JP". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Universal Root Certification Authority,OU=(c) 2008 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=KEYNECTIS ROOT CA,OU=ROOT,O=KEYNECTIS,C=FR". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G3,OU=(c) 2008 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:00:38 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G2,OU=(c) 2007 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+Successfully Connected to Node Manager.
+---- demarrage du serveur d admin ----
+Starting server AdminServer ...
+Error Starting server AdminServer: weblogic.nodemanager.NMException: Exception while starting server 'AdminServer'
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au node manager ----
+/wls/admin/domains
+/wls/admin/domains/DOM_INT_FORMS
+frpivovm2000.exa-internal.intra.corp
+5556
+DOM_INT_FORMS
+Connecting to Node Manager ...
+<Aug 14, 2014 10:03:50 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<Aug 14, 2014 10:03:50 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Entrust Root Certification Authority - G2,OU=(c) 2009 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G3,OU=(c) 2008 thawte\, Inc. - For authorized use only,OU=Certification Services Division,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G2,OU=(c) 2007 thawte\, Inc. - For authorized use only,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 3 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 2 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 3,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 2,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Class 3 Public Primary Certification Authority - G4,OU=(c) 2007 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "OU=Security Communication RootCA2,O=SECOM Trust Systems CO.\,LTD.,C=JP". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Universal Root Certification Authority,OU=(c) 2008 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=KEYNECTIS ROOT CA,OU=ROOT,O=KEYNECTIS,C=FR". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G3,OU=(c) 2008 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:03:50 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G2,OU=(c) 2007 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+Successfully Connected to Node Manager.
+---- connexion au serveur d admin ----
+Please enter your username :Please enter your password :
+Connecting to t3://frpivovm2000.exa-internal.intra.corp:7101 with userid weblogic ...
+This Exception occurred at Thu Aug 14 10:05:17 CEST 2014.
+javax.naming.CommunicationException [Root exception is java.net.ConnectException: t3://frpivovm2000.exa-internal.intra.corp:7101: Destination unreachable; nested exception is: 
+	java.net.ConnectException: Connection refused; No available router to destination]
+==> Erreur : 
+Error occured while performing connect : Error getting the initial context. There is no server running at t3://frpivovm2000.exa-internal.intra.corp:7101 
+Use dumpStack() to view the full stacktrace
+
+
+Exiting WebLogic Scripting Tool.
+
+
+CLASSPATH=/wls/products/weblogic/forms/10.3.6.0/patch_wls1036/profiles/default/sys_manifest_classpath/weblogic_patch.jar:/wls/products/jdk/jdk1.7.0_60/lib/tools.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic_sp.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/weblogic.jar:/wls/products/weblogic/forms/10.3.6.0/modules/features/weblogic.server.modules_10.3.6.0.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/server/lib/webservices.jar:/wls/products/weblogic/forms/10.3.6.0/modules/org.apache.ant_1.7.1/lib/ant-all.jar:/wls/products/weblogic/forms/10.3.6.0/modules/net.sf.antcontrib_1.1.0.0_1-0b2/lib/ant-contrib.jar::/wls/products/weblogic/forms/10.3.6.0/utils/config/10.3/config-launch.jar::/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbynet.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbyclient.jar:/wls/products/weblogic/forms/10.3.6.0/wlserver_10.3/common/derby/lib/derbytools.jar::
+
+Initializing WebLogic Scripting Tool (WLST) ...
+
+Welcome to WebLogic Server Administration Scripting Shell
+
+Type help() for help on available commands
+
+Lecture du fichier de proprietes : "/export/scripts/weblogic/controleWlsDomain/properties/DOM_INT_FORMS_frpivovm2000.properties"
+---- connexion au node manager ----
+/wls/admin/domains
+/wls/admin/domains/DOM_INT_FORMS
+frpivovm2000.exa-internal.intra.corp
+5556
+DOM_INT_FORMS
+Connecting to Node Manager ...
+<Aug 14, 2014 10:05:20 AM CEST> <Info> <Security> <BEA-090905> <Disabling CryptoJ JCE Provider self-integrity check for better startup performance. To enable this check, specify -Dweblogic.security.allowCryptoJDefaultJCEVerification=true> 
+<Aug 14, 2014 10:05:20 AM CEST> <Info> <Security> <BEA-090906> <Changing the default Random Number Generator in RSA CryptoJ from ECDRBG to FIPS186PRNG. To disable this change, specify -Dweblogic.security.allowCryptoJDefaultPRNG=true> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Entrust Root Certification Authority - G2,OU=(c) 2009 Entrust\, Inc. - for authorized use only,OU=See www.entrust.net/legal-terms,O=Entrust\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G3,OU=(c) 2008 thawte\, Inc. - For authorized use only,OU=Certification Services Division,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=thawte Primary Root CA - G2,OU=(c) 2007 thawte\, Inc. - For authorized use only,O=thawte\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 3 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=Buypass Class 2 Root CA,O=Buypass AS-983163327,C=NO". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 3,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=T-TeleSec GlobalRoot Class 2,OU=T-Systems Trust Center,O=T-Systems Enterprise Services GmbH,C=DE". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Class 3 Public Primary Certification Authority - G4,OU=(c) 2007 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GlobalSign,O=GlobalSign,OU=GlobalSign Root CA - R3". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "OU=Security Communication RootCA2,O=SECOM Trust Systems CO.\,LTD.,C=JP". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=VeriSign Universal Root Certification Authority,OU=(c) 2008 VeriSign\, Inc. - For authorized use only,OU=VeriSign Trust Network,O=VeriSign\, Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=KEYNECTIS ROOT CA,OU=ROOT,O=KEYNECTIS,C=FR". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G3,OU=(c) 2008 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.113549.1.1.11.> 
+<Aug 14, 2014 10:05:21 AM CEST> <Notice> <Security> <BEA-090898> <Ignoring the trusted CA certificate "CN=GeoTrust Primary Certification Authority - G2,OU=(c) 2007 GeoTrust Inc. - For authorized use only,O=GeoTrust Inc.,C=US". The loading of the trusted certificate list raised a certificate parsing exception PKIX: Unsupported OID in the AlgorithmIdentifier object: 1.2.840.10045.4.3.3.> 
+Successfully Connected to Node Manager.
+---- connexion au serveur d admin ----
+Please enter your username :Please enter your password :
+Connecting to t3://frpivovm2000.exa-internal.intra.corp:7101 with userid weblogic ...
+This Exception occurred at Thu Aug 14 10:05:40 CEST 2014.
+javax.naming.CommunicationException [Root exception is java.net.ConnectException: t3://frpivovm2000.exa-internal.intra.corp:7101: Destination unreachable; nested exception is: 
+	java.net.ConnectException: Connection refused; No available router to destination]
+==> Erreur : 
+Error occured while performing connect : Error getting the initial context. There is no server running at t3://frpivovm2000.exa-internal.intra.corp:7101 
+Use dumpStack() to view the full stacktrace
+
+
+Exiting WebLogic Scripting Tool.
+

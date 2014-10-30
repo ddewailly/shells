@@ -1,0 +1,44 @@
+#!/bin/bash
+ 
+PRIMARY=
+SECONDARY=
+ 
+while [ $# -gt 0 ]
+do
+ case "$1" in
+   -p) PRIMARY="$2"; shift;;
+   -s) SECONDARY="$2"; shift;;
+   *) echo ""; echo >&2 \
+      "usage: $0 [-s <Secondary Storage Node hostname/IP>] [-p <Primary Storage Node hostname/IP>] "
+      echo""; exit 1;;
+    *) break;;
+ esac
+ shift
+done
+ 
+function updateStorage {
+ssh root@$1 << EOF
+cd /
+configuration services ipmp
+show
+set interval=5000
+set failback=false
+commit
+cd /
+configuration services nfs
+show
+set enable_delegation=false
+commit
+quit
+EOF
+}
+ 
+if [ "$PRIMARY" != "" ]
+then
+ updateStorage $PRIMARY
+fi
+ 
+if [ "$SECONDARY" != "" ]
+then
+ updateStorage $SECONDARY
+fi

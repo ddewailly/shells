@@ -2149,8 +2149,8 @@ function unconfigureVM() {
 					echo "***********************************************"
 					echo "*** Mount $SYSTEMIMGDIR"
 					echo "***********************************************"
-	        mount -t ext3 /dev/mapper/$VOL_GRP-$LOG_VOL $SYSTEMIMGDIR
-	        if [[ $? -ne 0 ]]
+	        mount /dev/mapper/$VOL_GRP-$LOG_VOL $SYSTEMIMGDIR
+	        if [[ "$?" == "1" ]]
 	        then
 	            echo "Failed to mount image file - exiting"
 	            vgchange -an $VOL_GRP
@@ -2161,8 +2161,8 @@ function unconfigureVM() {
 					echo "***********************************************"
 					echo "*** Mount $SYSTEMIMGDIR"
 					echo "***********************************************"
-	        mount -t ext3 /dev/mapper/`basename $LOOP`p2 $SYSTEMIMGDIR
-	        if [[ $? -ne 0 ]]
+	        mount /dev/mapper/`basename $LOOP`p2 $SYSTEMIMGDIR
+	        if [[ "$?" == "1" ]]
 	        then
 	            echo "Failed to mount image file - exiting"
 	            deleteLoopFileSystem
@@ -2336,8 +2336,7 @@ function findFileSystemType() {
 		if [[ "$partition" == *"$LOOP"* ]]
 		then
 			P=$((P + 1))
-			#if [[ "$partition" == *"Linux|LVM"* ]]
-			if [[ "$partition" == *"Linux"* ]]
+			if [[ "$partition" == *"Linux|LVM"* ]]
 			then
 				IMGFS="lvm"
 				break;
@@ -2764,7 +2763,7 @@ function captureVServer() {
     VSERVER_NAME=$VSERVER
     stopVServer
     executeRemoteCreateTemplate
-    #startVServer
+    startVServer
     generateCaptureAssetFile
     echo ""
     echo ""
